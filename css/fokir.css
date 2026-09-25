@@ -1,0 +1,750 @@
+nav{
+    background-color: #333;
+    padding: 10px 0px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+  
+   
+
+}
+ nav .continar{
+   
+   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+ nav .continar .logo{
+    
+     width: 6%;
+ }
+nav .continar img{
+    width: 100%;
+}
+
+
+
+
+   nav .continar .linkes ul{
+     list-style: none;
+     display: flex;
+    column-gap: 15px;
+ 
+   }
+   nav .continar .linkes ul li.active  a{
+     color: #FF305B;
+   }
+
+
+   nav .continar .linkes ul li a{
+        text-decoration: none;
+        color: #fff;
+        letter-spacing: 1.5px;
+        position: relative;
+     
+   }
+
+     nav .continar .linkes ul li  a:hover{
+                          color: var(--mainColor);
+                          transition-duration: 1s;
+     }
+ nav .continar .burger{
+    display: none;
+ }
+     nav .continar .linkes ul li a::after{ 
+                             content:"";
+                             width: 0%;
+                             height: 2px;
+                             display: block;
+                             background-color: var(--mainColor);
+                             position: absolute;
+                             bottom: -4px;
+                             left: 50%;
+                             transform: translateX(-50%);
+                             transition-duration: 0.5s;
+                           
+                            
+                            
+     } 
+
+
+     nav .continar .linkes ul li:hover a::after, nav .continar .linkes ul li.active a::after{
+        width: 100%;
+        color: var(--mainColor);
+
+     }
+
+  
+
+
+
+header{
+     height: 100vh;
+     background-image: url("../image/slider-01-cd8154e4.jpg");
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     overflow: hidden;
+     position: relative;
+    width: 100%;}
+     
+    header::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        display: block;
+        background-color: rgba(0, 0, 0,0.5);
+        position: absolute;
+       
+       
+    }
+         
+    
+
+header .content{       
+            
+                text-align: center;
+               
+                position: absolute;}
+                
+            
+           
+header .content  h5{ color: #fff;  
+                   font-size: 30px;
+                   font-weight: 400;}
+            
+                   
+
+
+      header .content h1       { color:var(--mainColor);
+                   font-size: 80px;
+               
+                   text-transform: capitalize;
+                   margin-block: 20px;
+
+}
+header .content p{color: #fff;
+    font-size: 20px;
+
+}
+header .content p::after{
+    content: "Designer |";
+    animation-name: animat2;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+header a.shape{
+     position: absolute;
+     bottom: 10%;
+     left: 50%;
+     width: 30px;
+     height: 60px;
+     border: 2px solid #FF305B;
+     border-radius: 15px;
+     transform: translateX(-50%);
+     overflow: hidden;
+ 
+}
+header a.shape::after{
+      content: "";
+      display: block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: var(--mainColor);
+      position: absolute;
+      top:-25%;
+     left: 50%;
+     transform: translate(-50%,-50%);
+     animation-name: animat;
+     animation-duration: 2s;
+     animation-iteration-count: infinite;
+    /* animation-direction: alternate;*/
+     animation-timing-function: linear;
+}
+
+
+ #About{
+    background-color:#151515;
+}
+ #About .continar{ 
+    
+    display: flex;
+    justify-content: space-between;
+
+   
+}
+#About .continar .part1{
+   
+    width: 50%;
+   
+    }
+
+
+     #About .continar .part1   .frame{
+          border-radius: 10px;
+          border: 5px solid var(--mainColor);
+          width: 350px;
+          margin: auto;
+         
+    
+    }
+     #About .continar .part1 .frame .image{
+          height: 100%;
+          position: relative;
+          top:10px;
+          left: 10px;
+          width: 100%;
+          border-radius: 10px;
+          overflow: hidden;
+         
+     }
+     #About .continar .part1 .frame .image img{ 
+        width: 100%;
+        height: 100%;
+        display: block;
+       
+     }
+
+     #About .continar .part1 .frame .image .layout{ 
+        background-color: rgba(0, 0, 0,0.5);
+        position: absolute;
+        top:100%;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        transition-duration: 1s;
+    }
+    #About .continar .part1 .frame .image:hover .layout {
+      
+top: 0%;
+      }
+      #About .continar .part1 .frame .image .layout ul{
+         list-style: none;
+         display: flex;
+         column-gap: 15px;
+      }
+       #About .continar .part1 .frame .image .layout ul li{
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+          background-color: #fff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          opacity: 0;
+          transform: translateY(-15px);
+  
+          
+        }
+        
+        #About .continar .part1 .frame .image:hover .layout ul li{ 
+            transition-duration: 1s;
+            opacity: 1;
+            transform: translateY(0px);
+        }
+         #About .continar .part1 .frame .image:hover .layout ul li:nth-of-type(1){ transition-delay: 1s;}
+           #About .continar .part1 .frame .image:hover .layout ul li:nth-of-type(2) { 
+                transition-delay: 1.2s;
+                
+            }
+            
+            #About .continar .part1 .frame .image:hover  .layout ul li:nth-of-type(3)  { 
+                transition-delay: 1.4s;}
+                #About .continar .part1 .frame .image:hover  .layout ul li:nth-of-type(4) {
+                    transition-delay: 1.6s;}
+   
+  
+   
+
+
+        #About .continar .part1 .frame .image .layout ul li a i.fa-facebook{
+    color: #1877F2;
+    }
+     #About .continar .part1 .frame .image .layout ul li a i.fa-instagram{ 
+       
+     color: #E3405F;
+    }
+    #About .continar .part1 .frame .image .layout ul li a  i.fa-twitter{ 
+  color:#10679A;}
+    #About .continar .part1 .frame .image .layout ul li a i.fa-github{ 
+    color: #131418; }
+
+
+
+
+
+#About .continar .part2{
+width: 50%;
+color: #fff;
+height:auto;
+}
+#About .continar .part2 h2{
+ border-left: 4px solid var(--mainColor);
+ text-transform: uppercase;
+ padding-left: 10px ;
+ margin-bottom: 10px;
+ font-size: 30px;
+}
+#About .continar .part2>p{
+     margin-bottom: 10px;
+     line-height: 1.5;
+     color: #B1C1C1;
+     
+}
+#About .continar .part2 hr{
+     border: 1.5px dotted #fff;
+      margin-bottom: 10px;
+   
+}
+#About .continar .part2 .infro{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+}
+#About .continar .part2 .infro  .col{
+  flex-basis: 50%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+#About .continar .part2 .infro .col h6{
+    font-weight: 60;
+    font-size: 15px;
+    color: #fff;
+}
+#About .continar .part2 .infro .col p{
+     color: #B1C1C1;
+}
+
+#About .continar .part2  .buttons{
+    display: flex;
+}
+#About .continar .part2  .buttons button{
+   
+    background-color: transparent;
+    border: 1px solid var(--mainColor);
+    border-radius: 5px;
+    color: var(--mainColor);
+    padding: 15px 25px;
+    transition-duration: .5s;
+     display: flex;
+    font-size: 15px;
+    cursor: pointer;
+}
+#About .continar .part2  .buttons button:first-child{
+    margin-right: 10px;
+}
+#About .continar .part2  .buttons button:hover{
+    background-color: var(--mainColor);
+    color: #fff;
+    transition-duration: .5s;
+}
+#Services{
+    background-color:#151515;
+}
+#Services .continar{
+    margin:  auto;
+    background-color: #151515;
+}
+#Services .continar .title{
+   
+    text-align: center;
+    margin-top: 0;
+     width: fit-content;
+     margin: auto;
+   
+}
+#Services .continar .title h4{
+    color: #fff;
+    margin: auto;
+       padding: 5px 20px ;
+     font-size: 40px;
+     font-weight:bold;
+   
+}
+#Services .continar .title .linkes {
+     width: 90%;
+     margin: auto;
+}
+ #Services .continar .title .linkes span{
+
+width: 50%;
+     height: 10px;
+    margin: auto;
+     border-bottom: 1px solid var(--mainColor);
+     display: block;
+ }
+  
+
+#Services .continar .title .linkes span:nth-of-type(2){
+    width: 100%;
+}
+#Services .continar .content{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap ;
+    background-color: transparent;
+   
+    margin-top: 50px;
+    
+}
+    
+    #Services .continar .content .box{   
+        width: 25%;     
+    }
+    
+    #Services .continar .content .box .item{   
+        border: 1px solid var(--mainColor);
+        padding: 20px 10px;
+        border-radius: 10px;
+        transform: translateY(0px);
+        text-align: center;
+        color: #fff;
+        margin-inline: 10px;  
+}
+
+#Services .continar .content .box .item i{
+    color: var(--mainColor);
+    margin-bottom: 15px;
+    font-size: 30px;
+}
+#Services .continar .content .box .item h5{
+    padding-bottom: 20px;
+    font-size: 15px;
+    font-weight: bold;
+}
+#Services .continar .content .box  .item p{
+    color: #B1C1C1;
+}
+
+
+#Services .continar .content .box .item:hover{
+    box-shadow:  0px 5px  rgba(255, 48, 91, 0.4),
+                 0px 10px rgba(255, 48, 91, 0.3),
+                 0px 15px rgba(255, 48, 91, 0.2),
+                 0px 20px rgba(255, 48, 91, 0.1),
+                 0px 25px rgba(255, 48, 91, 0.05);
+   
+  
+    transform: translateY(-15px);
+    transition-duration: 1s;
+   
+}
+
+
+#Portfolio .continar .title{
+   
+       color: #fff;
+    padding: 20px 20px;
+    width: fit-content;
+    margin: auto;
+}
+#Portfolio .continar .title .links{
+  
+    width: 100%;
+    
+}
+
+#Portfolio .continar .title .links span{
+    width: 50%;
+    height: 1px;
+    display: block;
+    margin: auto;
+ background-color: var(--mainColor);
+ margin-block: 5px;
+    
+   
+}
+#Portfolio .continar .title .links span:nth-of-type(2){
+    width: 100%;
+}
+#Portfolio .continar .content{
+
+display: flex;
+flex-wrap: wrap;
+justify-content: space-evenly;
+
+}
+#Portfolio .continar .content .box{
+    width: 33.33%;
+}
+#Portfolio .continar .content .box .item{
+    position: relative;
+    margin:  10px;
+    overflow: hidden;
+    border-radius: 10px;
+    
+
+}
+#Portfolio .continar .content .box { margin-bottom: 20px;}
+
+
+#Portfolio .continar .content .box img{
+    width: 100%;
+    height: 100%;
+   display: block;
+
+ 
+}
+
+#Portfolio .continar .content .box .layout{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(51, 51, 51, .5);
+    
+}
+#Portfolio .continar .content .box .layout::before{
+    content: "";
+    width: 0%;
+    height: 0%;
+    display: block;
+    border-radius: 50%;
+    background-color: rgba(255, 48, 91, 0.5);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+#Portfolio .continar .content .box .item:hover .layout::before{
+    transition-duration: 1s;
+       width: 100%;
+       height: 100%;
+       border-radius: 0%;
+
+}
+#Portfolio .continar .content .box .layout h3{
+   background-color: #FF305B;
+   color: #fff;
+   width: 100%;
+  position: absolute;
+  top: 30px;
+  left: 100%;
+   text-align: center;
+   padding: 10px 0px;
+}
+#Portfolio .continar .content .box  .item:hover .layout h3{
+    left: 0%;
+    transition-duration: 1s;
+    transition-delay: 1s;
+}
+#Portfolio .continar .content .box .layout a{
+    background-color: #fff;
+    color: #FF305B;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: 10px 20px;
+   text-decoration: none;
+   position: absolute;
+   bottom:-200px;
+   left: 50%;
+   transform: translateX(-50%);
+   cursor: pointer;
+   width: max-content;
+
+
+   
+}
+#Portfolio .continar .content .box .item:hover .layout a{
+    bottom:30px;
+    transition-duration: 1s;
+    transition-delay: 1s;
+}
+#Portfolio .continar .content .box .layout a i{
+    color: #E3405F;
+}
+
+
+
+#Blog .continar .title{    color: #fff;
+    padding: 0px 30px;
+    width: fit-content;
+    margin: auto;
+  
+    margin-bottom: 40px;
+
+}
+
+
+
+
+     
+
+
+
+#Blog .continar .content{
+    width: 100%;
+     display: flex;
+    flex-wrap: wrap;
+   
+}
+ #Blog .continar .content .box{
+    width: 33.33%;
+    
+    
+}
+#Blog .continar .content .box .item{
+    width: 300px;
+    margin: auto;
+    border: 1px solid var(--mainColor);
+    border-radius: 10px;
+    overflow: hidden;
+    
+}
+
+#Blog .continar .content img{
+    height: 170px;
+    width: 100%;
+  
+    
+}
+#Blog .continar .content .box .item iframe{
+    width: 100%;
+   
+
+}
+
+#Blog .continar .content .box .item .con{
+    
+    padding: 10px 20px;
+    color: #fff;
+
+ }
+ #Blog .continar .content .box h6{
+    font-size: 17px;
+    margin-block: 10px;
+ }
+#Blog .continar .content .box p{
+     color: #B1C1C1;
+     font-weight: 400;
+     line-height: 2;
+}
+#Blog .continar .content .box .con button{
+    border: 1px solid var(--mainColor);
+    border-radius: 10px;
+    color: #FF305B;
+    background-color: transparent;
+    text-decoration: none;
+    padding: 10px 10px ;
+    margin-block: 10px;
+    cursor: pointer;
+    transition-duration: .5s;
+}
+#Blog .continar .content .box .item button:hover {
+     background-color: #FF305B;
+     color: #fff;
+}
+#Blog .continar .content .box .item button i{
+    transition-duration: .5s;
+}
+#Blog .continar .content .box .item button:hover i{
+     margin-left: 5px;
+     
+}
+#ContactUs {
+   width: 100%;}
+   
+#ContactUs .continar{
+
+    width: 100%;
+}
+ 
+
+#ContactUs .continar .title{
+ 
+    width: fit-content;
+  
+    margin:   auto;
+}
+#ContactUs .continar .title  h3{
+    color:#fff;
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+
+}
+  
+
+#ContactUs .continar form{
+    width: 75%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+   
+  
+   
+}
+#ContactUs .continar form .box {
+
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+#ContactUs .continar form .box .item1 input,
+   #ContactUs .continar form .box .item1 textarea {
+    width: 100%;
+    border: 1px solid var(--mainColor);
+    background-color: transparent;
+    border-radius: 10px;
+    padding: 10px ;
+    color: #fff;
+}
+  #ContactUs .continar form .box .item1  input::placeholder,
+     #ContactUs .continar form .box .item1 textarea::placeholder{
+    color:#fff;
+  }
+#ContactUs .continar form .box:nth-of-type(1),#ContactUs .continar form .box:nth-of-type(2){
+    width: 50%;
+}
+#ContactUs .continar form .item1:nth-of-type(1){
+    margin-right: 5px;
+  
+}
+#ContactUs .continar form .item1:nth-of-type(2){
+    margin-left: 5px;
+   
+}
+   #ContactUs .continar form .box .item1 textarea{
+    resize: none;
+    height: 150px;
+    color: #fff;
+   }
+#ContactUs .continar form button{
+    border: 1px solid var(--mainColor);
+    background-color: transparent;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition-duration: .5s;
+    margin: 0;
+    color: var(--mainColor);
+
+}
+#ContactUs .continar form button:hover{
+    color: #fff;
+    background-color: var(--mainColor);
+}
+footer{
+    background-color: #333;
+    text-align: center;
+    padding: 10px 20px;
+    color: #fff;
+   
+}
